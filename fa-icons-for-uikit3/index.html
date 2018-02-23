@@ -1,1 +1,162 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Font Awesome 5 icons for UIKit 3">
+    <meta name="keywords" content="UIKit3, Font awesome 5">
+    <meta name="author" content="Taimur Aziz">
+    
+    <title>Font Awesome 5 icons for UIKit 3</title>
+    
+    
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    
+    <!-- Template JavaScripts -->
+    <script src="js/uikit-core.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    
+    <link rel="stylesheet" href="css/agate.css">
+    <script src="js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+    <div class="uk-section uk-section-primary">
+        <div class="uk-container uk-container-expand">
+            <h1>Font Awesome 5 icons for UIKit 3</h1>
+            <p class="uk-text-large">Extended your UIkit icon library with custom icons.</p>
+        </div>        
+    </div>
+    <div class="uk-section uk-section-muted">
+        <div class="uk-container uk-container uk-background-default uk-box-shadow-medium">
+            <div class="uk-padding">
+                
+<div>
+<h2>Add Font Awesome 5 icons to UIKit Framework</h2>
+<p class="uk-text-large">UIkit's icon library can be extended and customized with your own icon files.</p>
+<hr class="uk-margin">
+<p>UIkit's icon library contains a number of SVG icons bundled in a single JavaScript file <code>uikit-icons.min.js</code>. This file includes all icons, no additional SVG files are needed. In this document, we will describe how you can add Font Awesome 5 icons to this library. Look at the <a href="https://getuikit.com/docs/icon" target="_blank">UIKit's Icon component</a> for an overview of the default icons.</p>
+<h3>Add Font Awesome 5 icons.</h3>
+<p>With these simple steps, you can easily add your own SVG icons to UIKit framework by including them in UIkit's build process.</p>
+</div>
+
+<div class="uk-text-large uk-heading-bullet uk-text-primary">
+Setup UIkit from <a href="https://github.com/uikit/uikit" target="_blank">Github source.</a> 
+<hr class="uk-margin">
+</div>
+
+<div class="uk-text-large uk-heading-bullet uk-text-primary">
+Download <a href="" target="_blank">Font Awesome 5 icons for UIKit 3.</a> 
+<hr class="uk-margin">
+</div>
+
+<div class="uk-text-large uk-heading-bullet uk-text-primary">
+Include your prefered SVG icons in UIkit's build process.   
+
+</div>      
+<div class="uk-margin">
+<p>Copy your prefered The build process will check 3 places for svg icon files:</p>
+<ul class="uk-list uk-list-bullet">
+<li>The Source folder: <code>/src/images/icons/*.svg</code></li>
+<li>The custom folder: <code>/custom/icons/*.svg</code></li>
+<li>Any custom theme: <code>/custom/mytheme/icons/*.svg</code></li>
+</ul>
+<hr class="uk-margin">
+</div>                               
+
+<div class="uk-text-large uk-heading-bullet uk-text-primary">
+Compile UIkit to include all your icons.
+</div>
+
+
+<div class="uk-margin"><pre class="uk-width-medium"><code> npm run compile</code></pre>
+
+    
+<p>Your additional icons will now be added to the icon library, in one of these two places:</p>
+<ul class="uk-list uk-list-bullet">
+<li><code>dist/js/uikit-icons.js</code> if you have added the icon to UIkit globally</li>
+<li><code>dist/js/uikit-icons-mytheme.js</code> if the icon is only inside a UIkit theme</li>
+</ul>
+<p>Make sure to include the icon library script, for more details see the <a href="https://getuikit.com/docs/installation" target="_blank">installation instructions</a>.</p>
+<hr class="uk-margin">
+</div>                               
+<div class="uk-text-large uk-heading-bullet uk-text-primary">Usage                   
+</div>                              
+<div class="uk-margin">
+    <p>Place your icons anywhere in your content <a href="https://getuikit.com/docs/icon" target="_blank"> the same way you add icons in UIKit 3.</a></p>
+<p class="uk-alert">Please notice that I have prefixed all the icons with <code>fa-</code> to prevent conflict with any existing icons. </p>
+</div>  
+
+
+<div class="uk-margin-top">
+<h3 class="uk-heading-line uk-margin"><span>Standard Example</span></h3>
+
+<span uk-icon="fa-chrome"></span> 
+<span uk-icon="fa-google-drive"></span> 
+<span uk-icon="fa-snapchat-ghost"></span> 
+<span uk-icon="fa-nintendo-switch"></span>
+
+
+<pre class="uk-width-xlarge"><code> 
+ &lt;span uk-icon="fa-chrome"&gt;&lt;/span&gt; 
+ &lt;span uk-icon="fa-google-drive"&gt;&lt;/span&gt;
+ &lt;span uk-icon="fa-snapchat-ghost"&gt;&lt;/span&gt; 
+ &lt;span uk-icon="fa-nintendo-switch"&gt;&lt;/span&gt;
+
+</code></pre>
+
+</div>
+
+<div>
+<h3 class="uk-heading-line uk-margin"><span>Ratio Example</span></h3>
+
+<span uk-icon="icon: fa-bitcoin; ratio: 3;"></span>
+<span uk-icon="icon: fa-bitcoin; ratio: 5;"></span>
+<span uk-icon="icon: fa-bitcoin; ratio: 7;"></span>
+
+
+<pre class="uk-width-xlarge"><code> 
+ &lt;span uk-icon="icon: fa-bitcoin; ratio: 3;"&gt;&lt;/span&gt;
+ &lt;span uk-icon="icon: fa-bitcoin; ratio: 5;"&gt;&lt;/span&gt;
+ &lt;span uk-icon="icon: fa-bitcoin; ratio: 7;"&gt;&lt;/span&gt;
+
+</code></pre>
+</div>
+
+<div class="uk-margin-medium">
+<h3 class="uk-heading-line uk-margin"><span>Button Example</span></h3>
+<a href="#" class="uk-icon-button" uk-icon="fa-twitter"></a href="#">
+<a href="#" class="uk-icon-button" uk-icon="fa-facebook-f"></a href="#">
+<a href="#" class="uk-icon-button" uk-icon="fa-google"></a href="#">
+<pre class="uk-width-xlarge"><code>
+ &lt;a href="#" class="uk-icon-button" uk-icon="fa-twitter"&gt;&lt;/a&gt;
+ &lt;a href="#" class="uk-icon-button" uk-icon="fa-facebook-f"&gt;&lt;/a&gt;
+ &lt;a href="#" class="uk-icon-button" uk-icon="fa-google"&gt;&lt;/a&gt;
+ 
+</code></pre>
+</div>
+         
+<div>
+<h3 class="uk-heading-line uk-margin"><span>Mixed Example</span></h3>
+
+<span class="uk-text-warning uk-margin-right" uk-icon="icon: fa-grunt; ratio: 7;"></span>
+<span class="uk-text-success uk-margin-right" uk-icon="icon: fa-xbox; ratio: 7;"></span>
+<span class="uk-text-danger" uk-icon="icon: fa-laravel; ratio: 7;"></span>
+
+
+<pre class="uk-width-xlarge"><code> 
+    &lt;span uk-icon="icon: fa-grunt; ratio: 7;"&gt;&lt;/span&gt;
+    &lt;span uk-icon="icon: fa-xbox; ratio: 7;"&gt;&lt;/span&gt;
+    &lt;span uk-icon="icon: fa-laravel; ratio: 7;"&gt;&lt;/span&gt;
+
+</code></pre>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
